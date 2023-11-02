@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+    /* Body defaults to an 8px margin */
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    color: white;
+    background-color: rgb(225, 30, 70);
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar {
+    /* Banner color fills up the whole screen. Navbar only takes up half */
+    /* 960px is half 1920px */
+    max-width: 960px;
+    padding: 0px;
+    margin: 0 auto;
+    /* Flexbox container for navbar elements */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    /* Navbar elements control padding for banner */
+    padding: 0;
+    margin: 12px 12px;
+}
+.navbar ul {
+    padding: 0px;
+    margin: 0px;
+}
+.navbar ul li {
+    /* background-color: rgb(255, 100, 100); */
+    display: inline-block;
+    padding: 0;
+    margin: 0; 
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+.navbar ul li a{
+    display: inline-block;
+    text-align: center;
+    min-width: 50;
+    padding: 20px 12px;
+}
+.navbar ul li a:hover {
+    background-color: rgb(225, 30, 70);
+    position: relative;
+    top: -5px;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+.page {
+    max-width: 960px;
+    padding: 0;
+    margin: 0 auto;
+}
+.page-content {
+    /* .page-content allows body content to have a margin aligned with navbar */
+    max-width: 960px;
+    padding: 0;
+    margin: 0 12px;
+}
+footer {
+    color: white;
+    background-color: rgb(225, 30, 70);
+    max-width: 100%;
+    padding: 20px 0;
+    margin: 0;
+}
+.footer-content {
+    max-width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+.footer-content a:hover {
+    text-decoration: underline;
+}
+.footer-content ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+.footer-content ul li {
+    padding: 0;
+    margin: 20px 12px;
+}
+.footer-content table td {
+    padding-right: 20px;
+}
+#copyright {
+    text-align: center;
+}
