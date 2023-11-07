@@ -1,42 +1,95 @@
 /* Stylesheet for irepair4u website */
 
 :root {
-    --red-accent: rgb(224, 31, 69);
+    --red-accent: rgb(225, 30, 70);
+    --lighter-red-accent: rgb(255, 40, 80);
     --gray-accent: rgb(190, 190, 190);
     --background-color: rgb(245, 245, 245);
-    --shadow-color: rgb(220, 220, 220);
+    --shadow-color: rgb(220, 220, 220); 
+    --two-column-width: 140px;
+    --three-column-width: 220px;
+    --four-column-width: 300px;
+    --six-column-width: 460px;
+    --eight-column-width: 620px;
+    --nine-column-width: 700px;
+    --twelve-column-width: 940px;
 }
 
+/* Column class styles */
+.two-column {
+    max-width: 140px;
+    margin: 0 10px;
+    padding: 0;
+}
+.three-column {
+    max-width: 220px;
+    margin: 0 10px;
+    padding: 0;
+}
+.four-column {
+    max-width: 300px;
+    margin: 0 10px;
+    padding: 0;
+}
+.six-column {
+    max-width: 460px;
+    margin: 0 10px;
+    padding: 0;
+}
+.eight-column {
+    max-width: 620px;
+    margin: 0 10px;
+    padding: 0;
+}
+.nine-column {
+    max-width: 700px;
+    margin: 0 10px;
+    padding: 0;
+}
+.twelve-column {
+    max-width: 940px;
+    margin: 0 10px;
+    padding: 0;
+}
+
+/* Body and body content style */
 body {
     background-color: white;
     font-family: sans-serif;
     /* Body defaults to an 8px margin */
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
+/* banner and banner content style */
 .banner {
     color: black;
     background-color: var(--gray-accent);
-    padding: 20px 12px;
+    padding: 0;
     margin: 0;
 }
-.banner h2 {
-    padding-bottom: 20px;
+.banner-content {
+    /* Need to use 940px instead of 960 because padding adds on outside of 960 */
+    max-width: var(--twelve-column-width);
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+.banner-title {
+    padding: 0;
     margin: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
-.banner p {
-    max-width: 960px;    
+.banner-content p { 
     padding: 0;
-    margin: 0 auto; 
+    margin: 0;
 }
 
+/* Header and header content style */
 header {
     color: black;
     background-color: white;
     max-width: 100%;
-    min-width: 960px;
     padding: 0;
     margin: 0;
     /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
@@ -45,8 +98,8 @@ header {
 .navbar {
     /* Banner color fills up the whole screen. Navbar only takes up half */
     /* 960px is half 1920px */
-    max-width: 960px;
-    padding: 20px 12px;
+    max-width: var(--twelve-column-width);
+    padding: 10px;
     margin: 0 auto;
     /* Flexbox container for navbar elements */
     display: flex;
@@ -64,45 +117,55 @@ header {
     margin: 0;
 }
 .navbar ul li {
-    /* background-color: rgb(255, 100, 100); */
     display: inline-block;
     padding: 0;
     margin: 0; 
 }
-.navbar a {
+.default-nav-button a{
+    color: white;
+    margin: 0;
+    padding: 20px;
+    /* This creates a gap between the last regular button and the default button */ 
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: var(--red-accent);
+    border-radius: 50px;
+}
+.default-nav-button a:hover {
+    background-color: var(--lighter-red-accent);
+}
+.nav-button a{
     color: black;
     text-decoration: none;
-}
-.navbar ul li a{
-    /* inline-block is applied to link element to increase size of selectable area */
-    display: inline-block;
-    text-align: center;
+    font-size: 110%;
     /* ensures min-width to homogenize appearance */
-    min-width: 50;
-    padding: 20px 12px;
+    min-width: 60px;
+    padding: 20px;
     margin: 0;
 }
-.navbar ul li a:hover {
-    /* Need to work on button animations */
-    background-color: var(--gray-accent);
+.nav-button a:hover {
+    color: var(--red-accent);
+    text-decoration: underline;
 }
 
+/* Page and page content style */
 .page {
-    padding: 12px;
+    padding: 0;
     margin: 0 auto;
 }
 .page-content {
     /* .page-content allows body content to have a margin aligned with navbar */
-    max-width: 960px;
-    padding: 0;
+    max-width: var(--twelve-column-width);
+    padding: 20px 10px;
     margin: 0 auto;
 }
 
+/* footer and footer content style */
 footer {
     color: white;
     background-color: var(--red-accent);
     max-width: 100%;
-    padding: 20px 12px;
+    padding: 20px;
     margin: 0;
 }
 .footer-content {
