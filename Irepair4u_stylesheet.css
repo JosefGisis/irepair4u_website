@@ -13,43 +13,7 @@
     --eight-column-width: 620px;
     --nine-column-width: 700px;
     --twelve-column-width: 940px;
-}
-
-/* Column class styles */
-.two-column {
-    max-width: 140px;
-    margin: 0 10px;
-    padding: 0;
-}
-.three-column {
-    max-width: 220px;
-    margin: 0 10px;
-    padding: 0;
-}
-.four-column {
-    max-width: 300px;
-    margin: 0 10px;
-    padding: 0;
-}
-.six-column {
-    max-width: 460px;
-    margin: 0 10px;
-    padding: 0;
-}
-.eight-column {
-    max-width: 620px;
-    margin: 0 10px;
-    padding: 0;
-}
-.nine-column {
-    max-width: 700px;
-    margin: 0 10px;
-    padding: 0;
-}
-.twelve-column {
-    max-width: 940px;
-    margin: 0 10px;
-    padding: 0;
+    --full-width: 960px;
 }
 
 /* Body and body content style */
@@ -80,16 +44,15 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
-.banner-content p { 
+.banner-paragraph {
     padding: 0;
     margin: 0;
 }
 
 /* Header and header content style */
 header {
-    color: black;
+    /* Text color is determined later */
     background-color: white;
-    max-width: 100%;
     padding: 0;
     margin: 0;
     /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
@@ -117,18 +80,20 @@ header {
     margin: 0;
 }
 .navbar ul li {
+    /* inline-block removes list styles and make items horizontal */
     display: inline-block;
     padding: 0;
     margin: 0; 
 }
 .default-nav-button a{
     color: white;
-    margin: 0;
-    padding: 20px;
-    /* This creates a gap between the last regular button and the default button */ 
-    margin-left: 20px;
-    text-decoration: none;
     background-color: var(--red-accent);
+    text-decoration: none;
+    margin: 0;
+    /* default-nav-button needs padding for its background color */
+    padding: 15px;
+    /* This creates a gap between the last regular button and the default button */ 
+    margin-left: 15px;
     border-radius: 50px;
 }
 .default-nav-button a:hover {
@@ -140,7 +105,7 @@ header {
     font-size: 110%;
     /* ensures min-width to homogenize appearance */
     min-width: 60px;
-    padding: 20px;
+    padding: 15px;
     margin: 0;
 }
 .nav-button a:hover {
@@ -148,39 +113,48 @@ header {
     text-decoration: underline;
 }
 
-/* Page and page content style */
-.page {
+/* Page content style */
+.page-content {
+    /* .page-content allows body content to have a margin aligned with navbar */
+    /* page-content is different than header, footer, or banner. page-content does not have padding, contained elements use margins and padding */
+    max-width: var(--full-width);
     padding: 0;
     margin: 0 auto;
 }
-.page-content {
-    /* .page-content allows body content to have a margin aligned with navbar */
-    max-width: var(--twelve-column-width);
-    padding: 20px 10px;
-    margin: 0 auto;
+
+#about {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.section-title {
+    font-size: 300%;
+    max-width: var(--six-column-width);
+    margin: 100px 10px;
+    text-align: left;
+}
+.section-paragraph {
+    font-size: 110%;
+    max-width: var(--six-column-width);
+    margin: 20px 10px;
+    text-align: left;
 }
 
 /* footer and footer content style */
 footer {
     color: white;
     background-color: var(--red-accent);
-    max-width: 100%;
-    padding: 20px;
+    /* padding in footer rather than footer-content for copyright element */ 
+    padding: 20px 10px;
     margin: 0;
 }
 .footer-content {
-    max-width: 960px;
+    max-width: var(--twelve-column-width);
     padding: 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-.footer-content a {
-    color: white;
-    text-decoration: none;
-}
-.footer-content a:hover {
-    text-decoration: underline;
 }
 .footer-content ul {
     list-style: none;
@@ -194,9 +168,22 @@ footer {
 }
 .footer-content table td {
     /* Creates a gap between table columns */
+    padding: 0;
     padding-right: 20px;
+    margin: 0;
+}
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-content a:hover {
+    text-decoration: underline;
 }
 
 #copyright {
     text-align: center;
+    padding: 20px;
+    margin: 0; 
 }
