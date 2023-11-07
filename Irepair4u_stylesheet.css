@@ -117,21 +117,24 @@ header {
 .page-content {
     /* .page-content allows body content to have a margin aligned with navbar */
     /* page-content is different than header, footer, or banner. page-content does not have padding, contained elements use margins and padding */
-    max-width: var(--full-width);
     padding: 0;
     margin: 0 auto;
 }
 
 #about {
+    max-width: var(--twelve-column-width);
+    margin: 0 auto;
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     padding: 0;
 }
 .section-title {
     font-size: 300%;
     max-width: var(--six-column-width);
-    margin: 100px 10px;
+    margin: 20px 10px;
     text-align: left;
 }
 .section-paragraph {
@@ -139,6 +142,37 @@ header {
     max-width: var(--six-column-width);
     margin: 20px 10px;
     text-align: left;
+}
+
+#services {
+    margin: 50px 0;
+    background-color: var(--gray-accent);
+    background-image: url(images/age-barros-fKAjOxgZNPg-unsplash.jpg);
+    background-size: cover;
+}
+.card-container {
+    color: white;
+    font-size: 100%;
+    max-width: var(--full-width);
+    padding: 40px 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    justify-content: center;
+}
+.service-card {
+    background-color: var(--red-accent);
+    width: var(--three-column-width);
+    height: var(--four-column-width);
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 30px 10px;
+    border-width: 5px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
 }
 
 /* footer and footer content style */
