@@ -1,5 +1,10 @@
 /* Stylesheet for irepair4u website */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --red-accent: rgb(225, 30, 70);
     --lighter-red-accent: rgb(255, 40, 80);
