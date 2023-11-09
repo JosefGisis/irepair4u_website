@@ -1,3 +1,4 @@
+<!-- Home page (index) for irepair4u website -->
 <!DOCTYPE html>
  <html lang="en-us">
     <head>
@@ -9,128 +10,204 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="navbar">
+
+
+        <!-- primary-header -->
+        <header class="primary-header">
+            <div class="container">
                 <div class="logo">
                     <a href="../home page/Irepair4u_home_page.html"><img src="../images/irepair_banner_full_ improved_65.svg" alt="irepair4u banner" title="irepair4u banner" /></a>
                 </div>
-                <ul id="navbar-links">
-                    <li class="nav-button"><a href="../about page/Irepair4u_about_page.html">ABOUT</a></li>
-                    <li class="nav-button"><a href="../services page/Irepair4u_services_page.html">SERVICES</a></li>
-                    <li class="nav-button"><a href="../faq page/Irepair4u_faq_page.html">FAQ</a></li>
-                    <li class="default-nav-button"><a href="../contact us page/Irepair4u_contact_page.html">CONTACT US</a></li>
-                </ul>
+                <nav class="primary-navigation">
+                    <ul aria-label="Primary" role="list" class="navbar-list">
+                        <li class="nav-link"><a href="../about page/Irepair4u_about_page.html">ABOUT</a></li>
+                        <li class="nav-link"><a href="../services page/Irepair4u_services_page.html">SERVICES</a></li>
+                        <li class="nav-link"><a href="../faq page/Irepair4u_faq_page.html">FAQ</a></li>
+                        <li class="nav-button"><a href="../contact us page/Irepair4u_contact_page.html"><button type="Button">CONTACT US</button></a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
-        <div class="page-content">
+
+
+        <!-- main -->
+        <main>
+
+
+            <!-- about-simple provides a simple slogan about this business -->
             <section id="about-simple">
-                <div>
-                    <p class="section-title">IPHONE, IPAD, AND MORE</p>
-                    <p class="section-paragraph">iREPAiR4U has been serving Lakewood, Jackson and neighboring communities for over 7 years. We provide fast, professional, and courteous services at affordable prices.
-                    Give us a call so we may assist you!</p>
+                <div class="container">
+                    <div class="double-column">
+                        <div>
+                            <h1 class="section-title">IPHONE, IPAD, AND MORE</h1>
+                            <p class="section-paragraph">iREPAiR4U has been serving Lakewood, Jackson and neighboring communities for over 7 years. We provide fast, professional, and courteous services
+                                at affordable prices. Give us a call so we may assist you!</p>
+                        </div>
+                     </div>
                 </div>
             </section>
-            <section id="testimonials">
-            </section>
+
+
+            <!-- Testimonials are empty for now -->
+            <section id="testimonials"></section>
+
+
+            <!-- about-detailed provides more detailed information about this business -->
             <section id="about-detailed">
-                <p class="section-title"> ABOUT US </p>
-                <div id="about-card-container">
-                    <div class="about-card">
-                        <h3>OUT STORY</h3>
-                        <p>We started repairing phones in 2016 in Lakewood, NJ. Since then, our business has grown and our workshop is now located in beautiful Jackson, New Jersey, right off clearstream, only five minutes out of lakewood.</p>
+                <div class="container">
+
+                    <!-- single-column for section-title -->
+                    <div class="single-column">
+                        <div>
+                            <h1 class="section-title"> ABOUT US </h1>
+                        </div>
                     </div>
-                    <img class="about-image" src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="image of a phone being repaired surrounded by phone repair tools">
-                    <img class="about-image" src="images/coverage1-3-2-460x307.jpg" width="460" height="307" alt="image of a smartphone and tablet side-by-side">
-                    <div class="about-card">
-                        <h3>COVERAGE</h3>
-                        <p>We offer a broad range of services for a wide variety of devices. We repair all popular makes and models, such as Apple, Samsung, LG, Google, OnePlus, Motorala, and more. We would love to work with you, so if you 
-                        don't see a device or service you need, please give us call!
-                        </p>
+
+                    <!-- Rather than using a grid, this section contains three double column divs-->
+                    <div class="double-column">
+                        <div class="double-column-text">
+                            <h3>OUT STORY</h3>
+                            <p>We started repairing phones in 2016 in Lakewood, NJ. Since then, our business has grown and our workshop is now located in beautiful Jackson, 
+                                New Jersey, right off clearstream, only five minutes out of lakewood.</p>
+                        </div>
+                        <div class="double-column-image">
+                            <img src="images/about-us-3-2-460x307.jpg" width="460" height="307" alt="image of a phone being repaired surrounded by phone repair tools">
+                        </div>
                     </div>
-                    <div class="about-card">
-                        <h3>CUSTOMER SERVICE, PRICING, AND QUALITY</h3>
-                        <p>Since our start, we have set customer service, affordability, and quality work as the cornerstone of our bussiness. We pride ourselves in passing savings on to our customers without compromising the quality of our work,
-                        while providing a warm and welcoming environment.
-                        </p>
+
+                    <div class="double-column">
+                        <div class="double-column-image">
+                            <img src="images/coverage1-3-2-460x307.jpg" width="460" height="307" alt="image of a smartphone and tablet side-by-side">
+                        </div>
+                        <div class="double-column-text">
+                            <h3>COVERAGE</h3>
+                            <p>We offer a broad range of services for a wide variety of devices. We repair all popular makes and models, such as Apple, Samsung, LG, Google, OnePlus, Motorala, and more. 
+                                We would love to work with you, so if you don't see a device or service you need, please give us call!</p>
+                        </div>
                     </div>
-                    <img class="about-image" src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone">
-                    
+
+                    <div class="double-column">
+                        <div class="double-column-text">
+                            <h3>CUSTOMER SERVICE, PRICING, AND QUALITY</h3>
+                            <p>Since our start, we have set customer service, affordability, and quality work as the cornerstone of our bussiness. We pride ourselves in passing savings on to our
+                                customers without compromising the quality of our work, while providing a warm and welcoming environment.</p>
+                        </div>
+                        <div class="double-column-image">
+                            <img src="images/trust-us1-3-2-460x307.jpg" width="460" height="307" alt="image of repairman fixing a phone">
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            <!-- services provides information on the services the business provides -->
             <section id="services">
-                <div id="service-card-container">
-                    <div class="service-card">
-                        <p>Cracked screen? Don't worry we will have your phone looking and working like new in no time!</p>
+                <div class="container">
+                    <div class="single-column">
+                        <div>
+                            <h1 class="section-title">Services</h1>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <p>Accidents happen. Bring us your water damaged phone so we can assist you. In the meantime, click here to see what you can do to increase your phone's chance of surviving.</p>
-                    </div>
-                    <div class="service-card">
-                        <p>If your phone isn't holding a charge like it used to, we offer fast and affordable battery replacement services.</p>
-                    </div>
-                    <div class="service-card">
-                        <p>Need to save precious data? We can help you recover and preserve all you invaluable photos, videos, and messages from your device.</p>
-                    </div>
-                    <div class="service-card">
-                        <p>We also offer accessories for your mobile devices, such as screen protectors, cases, chargers, car mounts, and more!</p>
+                    <div class="three-column-grid">
+                        <div class="grid-card">
+                            <p>Cracked screen? Don't worry we will have your phone looking and working like new in no time!</p>
+                        </div>
+                        <div class="grid-card">
+                            <p>Accidents happen. Bring us your water damaged phone so we can assist you. In the meantime, click here to see what you can do to increase your phone's chance of surviving.</p>
+                        </div>
+                        <div class="grid-card">
+                            <p>If your phone isn't holding a charge like it used to, we offer fast and affordable battery replacement services.</p>
+                        </div>
+                        <div class="grid-card">
+                            <p>Need to save precious data? We can help you recover and preserve all you invaluable photos, videos, and messages from your device.</p>
+                        </div>
+                        <div class="grid-card">
+                            <p>We also offer accessories for your mobile devices, such as screen protectors, cases, chargers, car mounts, and more!</p>
+                        </div>
                     </div>
                 </div>
             </section>
-        </div>
+
+        </main>
+
+
+        <!-- banner custom element -->
         <div class="banner">
-            <div class="banner-content">
-                <h2 class="banner-title">Free 90-Day Warranty!</h2>
-                <p class="banner-paragraph">All our phone repair services are backed by our free 90-day warranty. We guarantee the quality of our work. If you encounter issue connected to the repair we conducted, we've got you covered.</p>
+            <div class="container">
+                <div class="single-column">
+                    <div>
+                        <h2 class="banner-title">Free 90-Day Warranty!</h2>
+                        <p class="banner-paragraph">All our phone repair services are backed by our free 90-day warranty. We guarantee the quality of our work. If you encounter issue connected to the repair we conducted, we've got you covered.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <footer>
-            <div class="footer-content">
-                <ul id="business-links">
-                    <li><h4>iREPAiR4U</h4></li>
-                    <li id="phone">P. (732)-330-3038</li>
-                    <li id="email">E. <a href="mailto:iRepairr4u@gmail.com">iRepairr4U@gmail.com</a><li>
-                    <li id="address">A. 750 Green Valley rd., Jackson, NJ 08527</li>
-                    <li>
-                        <table id="hours">
-                            <tr><th id="hours-heading"><h4>HOURS:</h4></th></tr>
-                            <!--<tr><td>Sunday</td><td>11:00am - 5:00pm</td></tr>
-                            <tr><td>Monday</td><td>11:00am - 5:00pm</td></tr>
-                            <tr><td>Tuesday</td><td> 11:00am - 5:00pm</td></tr>
-                            <tr><td>Wednesday</td><td> 11:00am - 5:00pm</td></tr>
-                            <tr><td>Thursday</td><td> 11:00am - 5:00pm</td></tr>-->
-                            <tr><td>Sun - Thu</td><td>11:00am - 5:00pm</td></tr>
-                            <tr><td>Friday</td><td> 11:00am - 2:00pm</td></tr>
-                            <tr><td>Saturday</td><td>closed</td></tr>
-                        </table>
-                    </li>
-                </ul>
-                <ul id="information-links">
-                    <li><h4>INFORMATION</h4></li>
-                    <li><a href="../about page/Irepair4u_about_page.html">about</a></li>
-                    <li><a href="../about page/Irepair4u_about_page.html">terms and conditions</a></li>
-                    <li><a href="../faq page/Irepair4u_faq_page.html">faq</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">services</a></li>
-                </ul>
-                <ul id="services-links">
-                    <li><h4>SERVICES</h4></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">screen repair</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">battery replacement</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">speaker repair</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">data recovery</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">board repairs</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">accessories</a></li>
-                </ul>
-                <ul id="devices-links ">
-                    <li><h4>DEVICES</h4></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">iphones</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">samsungs</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">smartphones</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">flip phones</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">tablets</a></li>
-                    <li><a href="../services page/Irepair4u_services_page.html">computers</a></li>
-                </ul>
+
+
+        <!-- main footer section -->
+        <footer class="primary-footer">
+            <div class="container">
+                <div class="four-column">
+                    <div>
+                        <ul id="business-links">
+                            <li><h4>iREPAiR4U</h4></li>
+                            <li id="phone">P. (732)-330-3038</li>
+                            <li id="email">E. <a href="mailto:iRepairr4u@gmail.com">iRepairr4U@gmail.com</a><li>
+                            <li id="address">A. 750 Green Valley rd., Jackson, NJ 08527</li>
+                            <li>
+                                <table id="hours">
+                                    <tr><th id="hours-heading"><h4>HOURS:</h4></th></tr>
+                                    <!--<tr><td>Sunday</td><td>11:00am - 5:00pm</td></tr>
+                                    <tr><td>Monday</td><td>11:00am - 5:00pm</td></tr>
+                                    <tr><td>Tuesday</td><td> 11:00am - 5:00pm</td></tr>
+                                    <tr><td>Wednesday</td><td> 11:00am - 5:00pm</td></tr>
+                                    <tr><td>Thursday</td><td> 11:00am - 5:00pm</td></tr>-->
+                                    <tr><td>Sun - Thu</td><td>11:00am - 5:00pm</td></tr>
+                                    <tr><td>Friday</td><td> 11:00am - 2:00pm</td></tr>
+                                    <tr><td>Saturday</td><td>closed</td></tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul id="information-links">
+                            <li><h4>INFORMATION</h4></li>
+                            <li><a href="../about page/Irepair4u_about_page.html">about</a></li>
+                            <li><a href="../about page/Irepair4u_about_page.html">terms and conditions</a></li>
+                            <li><a href="../faq page/Irepair4u_faq_page.html">faq</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">services</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul id="services-links">
+                            <li><h4>SERVICES</h4></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">screen repair</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">battery replacement</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">speaker repair</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">data recovery</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">board repairs</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">accessories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul id="devices-links ">
+                            <li><h4>DEVICES</h4></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">iphones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">samsungs</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">smartphones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">flip phones</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">tablets</a></li>
+                            <li><a href="../services page/Irepair4u_services_page.html">computers</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="single-column">
+                    <div>
+                        <p id="copyright">&copy 2023 iRepair4U LLC</p>
+                    </div>
+                </div>   
             </div>
-            <p id="copyright">&copy 2023 iRepair4U LLC</p>
         </footer>
+
     </body>
+
  </html>

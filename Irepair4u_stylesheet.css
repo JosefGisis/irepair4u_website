@@ -65,7 +65,7 @@ header {
     /* box-shadow takes horizonatal and vertical offset then blur distance and then shadow distance */
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
 }
-.navbar {
+header .container {
     /* Banner color fills up the whole screen. Navbar only takes up half */
     /* 960px is half 1920px */
     max-width: var(--twelve-column-width);
@@ -81,18 +81,18 @@ header {
     padding: 0;
     margin: 0;
 }
-.navbar ul {
+.navbar-list {
     /* Removes redundant margin and padding */
     padding: 0;
     margin: 0;
 }
-.navbar ul li {
+.navbar-list li {
     /* inline-block removes list styles and make items horizontal */
     display: inline-block;
     padding: 0;
     margin: 0; 
 }
-.default-nav-button a{
+.nav-button a{
     color: white;
     background-color: var(--red-accent);
     text-decoration: none;
@@ -103,10 +103,10 @@ header {
     margin-left: 15px;
     border-radius: 50px;
 }
-.default-nav-button a:hover {
+.nav-button a:hover {
     background-color: var(--lighter-red-accent);
 }
-.nav-button a{
+.nav-link a{
     color: black;
     text-decoration: none;
     font-size: 110%;
@@ -115,17 +115,15 @@ header {
     padding: 15px;
     margin: 0;
 }
-.nav-button a:hover {
+.nav-link a:hover {
     color: var(--red-accent);
     text-decoration: underline;
 }
 
 /* Page content style */
-.page-content {
-    /* .page-content allows body content to have a margin aligned with navbar */
-    /* page-content is different than header, footer, or banner. page-content does not have padding, contained elements use margins and padding */
+main {
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 }
 
 #about-simple {
