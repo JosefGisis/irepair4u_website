@@ -33,7 +33,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-    --red-accent: rgb(225, 30, 70,);
+    --red-accent: rgb(225, 30, 70);
     --lighter-red-accent: rgb(255, 40, 80);
     --gray-accent: rgb(190, 190, 190);
 
@@ -52,11 +52,11 @@ p, h1, h2, h3, h4, h5, h6 {
     --fs-title-regular: 200%;
     --fs-title-large: 300%;
 
-    --fs-body: var(--fs-regular);
-    --fs-card: var(--fs-large);
-    --fs-column: var(--fs-larger);
-    --fs-title: var(--fs-title-regular);
-    --fs-section-title: var(--fs-title-large);
+    --fs-body: 100%;
+    --fs-card: 110%;
+    --fs-column: 120%;
+    --fs-title: 200%;
+    --fs-section-title: 300%;
      
     --two-column-width: 140px;
     --three-column-width: 220px;
@@ -66,16 +66,113 @@ p, h1, h2, h3, h4, h5, h6 {
     --nine-column-width: 700px;
     --twelve-column-width: 940px;
     --full-width: 960px;
+    --base-padding: 1em;
+}
+
+.background-red {
+    background-color: var(--red-accent);
+}
+
+.background-gray {
+    background-color: var(--gray-accent);
+}
+
+.text-red {
+    color: var(--red-accent);
+}
+
+.text-gray {
+    color: var(--gray-accent);
+}
+
+.fs-body {
+    font-size: var(--fs-body);
+}
+
+.fs-card {
+    font-size: var(--fs-card);
+}
+
+.fs-column {
+    font-size: var(--fs-column);
+}
+
+.fs-title {
+    font-size: var(--fs-title);
+}
+
+.fs-section-title {
+    font-size: var(--fs-section-title);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.two-column-width {
+    max-width: var(--two-column-width);
+}
+
+.three-column-width {
+    max-width: var(--three-column-width);
+}
+
+.four-column-width {
+    max-width: var(--four-column-width);
+}
+
+.six-column-width {
+    max-width: var(--six-column-width);
+}
+
+.eight-column-width {
+    max-width: var(--eight-column-width);
+}
+
+.nine-column-width {
+    max-width: var(--nine-column-width);
+}
+
+.twelve-column-width {
+    max-width: var(--twelve-column-width);
+}
+
+.full-width {
+    max-width: var(--full-width);
+}
+
+.container {
+    width: min(var(--full-width), 100% - var(--base-padding));
+    margin-inline: auto;
+}
+
+.double-column {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.four-column {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Body and body content style */
 body {
-    background-color: white;
     font-family: sans-serif;
-    /* Body defaults to an 8px margin */
-    margin: 0;
-    padding: 0;
-}
+    font-size: var(--fs-body);
+    color: black;
+    background-color: white;
+}   
 
 /* banner and banner content style */
 .banner {
@@ -138,6 +235,7 @@ header .container {
     margin: 0; 
 }
 .nav-button a{
+    cursor: pointer; 
     color: white;
     background-color: var(--red-accent);
     text-decoration: none;
@@ -151,6 +249,11 @@ header .container {
 .nav-button a:hover {
     background-color: var(--lighter-red-accent);
 }
+
+.button {
+    cursor: crosshair;
+}
+
 .nav-link a{
     color: black;
     text-decoration: none;
@@ -271,9 +374,8 @@ main {
 }
 
 /* footer and footer content style */
-footer {
+.primary-footer{
     color: white;
-    background-color: var(--red-accent);
     /* padding in footer rather than footer-content for copyright element */ 
     padding: 20px 10px;
     margin: 0;
