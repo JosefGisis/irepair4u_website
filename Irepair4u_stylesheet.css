@@ -22,7 +22,7 @@ img, picture, video, canvas, svg {
     max-width: 100%;
 }
 
-imput, button, textarea, select {
+input, button, textarea, select {
     font: inherit;
 }
 
@@ -38,13 +38,14 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Variables */
 :root {
     --red-accent: rgb(225, 30, 70);
-    --lighter-red-accent: rgb(255, 40, 80);
+    --lighter-red-accent: rgba(225, 30, 70, 0.8);
     --gray-accent: rgb(190, 190, 190);
 
-    --gray-background: rgb(240, 240, 240);
-    --red-background: rgb(255, 176, 176);
+    --gray-background: rgba(190, 190, 190, 0.3);
+    --red-background: rgba(225, 30, 70, 0.3);
     --background-color: rgb(245, 245, 245);
-    --shadow-color: rgb(220, 220, 220);
+    --shadow-color: rgb(160, 160, 160);
+    --lighter-shadow-color: rgb(200, 200, 200);
 
     --fw-regular: 400;
     --fw-semi-bold: 500;
@@ -145,6 +146,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .nine-column-width {
     max-width: var(--nine-column-width);
+    text-align: center;
 }
 
 .twelve-column-width {
@@ -193,6 +195,48 @@ section {
     justify-content: space-between;
 }
 
+.red-button { 
+    color: white;
+    background-color: var(--red-accent);
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--red-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 100ms;
+    box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+}
+
+.red-button:hover {
+    background-color: var(--lighter-red-accent);
+    transform: translateY(1px);
+    box-shadow: 2px 4px 4px 0px var(--shadow-color);
+}
+
+.inverse-red-button {
+    color: var(--red-accent);
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--red-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 100ms;
+    box-shadow: 4px 8px 4px 0px var(--lighter-shadow-color);
+}
+
+.inverse-red-button:hover {
+    color: var(--lighter-red-accent);
+    border-color: var(--lighter-red-accent);
+    text-decoration: underline;
+    transform: translateY(1px);
+    box-shadow: 2px 4px 4px 0px var(--shadow-color);
+}
+
 
 /* Body and body content style */
 body {
@@ -220,19 +264,9 @@ header {
     display: inline-block;
 }
 
-.red-button { 
-    color: white;
-    background-color: var(--red-accent);
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-    padding: 10px;
+header .red-button {
     /* This creates a gap between the last regular button and the default button */ 
     margin-left: 15px;
-    border-radius: 100vmax;
-}
-.red-button:hover {
-    background-color: var(--lighter-red-accent);
 }
 
 .nav-link a{
@@ -250,147 +284,73 @@ header {
 
 
 /* Page content style */
-#about-simple {
-    max-width: var(--twelve-column-width);
-    margin: 0 auto;
-    margin-top: 150px;
-    padding: 0;
+#about-simple .red-button {
+    margin: 20px 10px;
 }
-#about-simple .section-title {
-    font-size: 300%;
-    max-width: var(--twelve-column-width);
-    margin: 40px 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-#about-simple .section-paragraph {
-    font-size: 110%;
-    max-width: var(--nine-column-width);
-    margin: 40px auto;
-    text-align: center;
-}
-#about-simple hr {
-    border: 0;
-    background: black;
-    height: 3px;
-    width: var(--eight-column-width);
-    margin: 0 auto;
-}
-#about-simple img {
-    width: 200px;
-    margin: 40px auto;
+
+#about-simple .inverse-red-button {
+    margin: 20px 10px;
 }
 
 #about-detailed {
-    background: linear-gradient(to bottom right, white, var(--gray-accent));
-    margin-top: 150px;
-    padding: 0;
+    background-color: var(--gray-background);
 }
-#about-detailed .section-title {
-    font-size: 300%;
-    text-align: center;
-    padding: 40px 0;    
-}
-#about-card-container {
-    font-size: 100%;
-    max-width: var(--twelve-column-width);
-    padding: 40px 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-}
-.about-card {
-    width: var(--four-column-width);
-    box-sizing: border-box;
-    padding: 0;
-    margin: 20px 0;
-}
-.about-image {
-    margin: 20px 0;
 
+#about-detailed:hover {
+    background-color: var(--red-background);
 }
+
+#about-detailed .section-title {   
+}
+
+#about-card-container {
+}
+
+.about-card {
+}
+
+.about-image {
+}
+
 .about-card h3 {
-    margin-bottom: 20px;
-    text-align: center;
 }
+
 .about-card p {
-    text-align: justify;
 }
 
 #services {
-    margin: 50px 0;
 }
+
 #service-card-container {
-    color: white;
-    font-size: 100%;
-    max-width: var(--twelve-column-width);
-    padding: 40px 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    justify-content: center;
 }
+
 .service-card {
-    background-color: var(--red-accent);
-    width: var(--three-column-width);
-    height: var(--four-column-width);
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 30px 10px;
-    border-width: 5px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 20px;
 }
 
 /* footer and footer content style */
 .primary-footer{
     color: white;
-    /* padding in footer rather than footer-content for copyright element */ 
-    padding: 20px 10px;
-    margin: 0;
 }
+
 .footer-content {
-    max-width: var(--twelve-column-width);
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 }
+
 .footer-content ul {
-    list-style: none;
-    margin: 0; 
-    padding: 0;
 }
+
 .footer-content ul li {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
 }
+
 .footer-content table td {
-    /* Creates a gap between table columns */
-    padding: 0;
-    padding-right: 20px;
-    margin: 0;
 }
+
 .footer-content a {
     color: white;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
 }
 .footer-content a:hover {
     text-decoration: underline;
 }
 
 #copyright {
-    text-align: center;
-    padding: 20px;
-    margin: 0; 
 }
