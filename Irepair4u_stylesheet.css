@@ -28,6 +28,8 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
 }
 
 #root, #__next {
@@ -142,6 +144,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .eight-column-width {
     max-width: var(--eight-column-width);
     text-align: center;
+    margin: 0 auto;
 }
 
 .nine-column-width {
@@ -193,6 +196,14 @@ section {
 .four-column {
     display: flex;
     justify-content: space-between;
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto; 
+    justify-content: center;
+    justify-items: center;
 }
 
 .red-button { 
@@ -248,9 +259,12 @@ body {
 
 
 /* banner and banner content style */
-.banner h1, h2, h3, h4, h5, h6 {
+.banner h1,
+.banner h2, 
+.banner h3, 
+.banner h4 {
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
 }
 
 /* Header and header content style */
@@ -284,6 +298,31 @@ header .red-button {
 
 
 /* Page content style */
+#about-simple {
+    background-image: url('/home page/images/irepair4u_logo_300.svg');
+    background-size: cover;
+}
+
+.svg-background {
+    position: absolute;
+    transform: rotate(-20deg);
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    left: 55%;
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#about-simple h1, 
+#about-simple h2, 
+#about-simple h3,
+#about-simple h4 {
+    margin-block: 30px;
+}
+
 #about-simple .red-button {
     margin: 20px 10px;
 }
@@ -292,39 +331,85 @@ header .red-button {
     margin: 20px 10px;
 }
 
+#about-simple img {
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+
 #about-detailed {
-    background-color: var(--gray-background);
+    background: linear-gradient(to bottom right, white, var(--gray-background), white, var(--gray-background));
 }
 
-#about-detailed:hover {
-    background-color: var(--red-background);
+#about-detailed .double-column {
+    height: 307px;
+    margin-block: 2.5em;
 }
 
-#about-detailed .section-title {   
+.double-column-text {
+    height: 307px;
+    order: 1;
+    max-width: var(--six-column-width);  
 }
 
-#about-card-container {
+.double-column-text h3 {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, var(--gray-background), var(--gray-accent));
 }
 
-.about-card {
+.double-column-text p {
+    padding: 1.5em;
 }
 
-.about-image {
+.double-column-image {
+    order: 2;
 }
 
-.about-card h3 {
+
+#services h1 {
+    padding-bottom: 1em;
+}
+.grid-card {
+    color: white;
+    margin-block: 1em;
+    padding: 10px;
+    background-color: var(--lighter-red-accent);
+    width: var(--three-column-width);
+    height: var(--four-column-width);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 3s;
 }
 
-.about-card p {
+.grid-card-logo {
+    height: var(--four-column-width);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
 }
 
-#services {
+.grid-card-text {
+    height: var(--four-column-width);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    transition: all 1s;
 }
 
-#service-card-container {
+.grid-card:hover .grid-card-logo {
+    transform: translateY(-100%);
 }
 
-.service-card {
+.grid-card:hover .grid-card-text {
+    transform: translateY(-100%);
 }
 
 /* footer and footer content style */
@@ -332,25 +417,59 @@ header .red-button {
     color: white;
 }
 
-.footer-content {
+.primary-footer ul {
+    margin-block: 20px;
+    padding: 0;
 }
 
-.footer-content ul {
+.primary-footer li {
+    list-style: none;
+    margin-bottom: 20px;
 }
 
-.footer-content ul li {
-}
-
-.footer-content table td {
-}
-
-.footer-content a {
+.primary-footer a {
     color: white;
     text-decoration: none;
 }
-.footer-content a:hover {
+
+#phone::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-mobile-svgrepo-com.svg');
+    background-size: cover; 
+}
+
+#email::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-mail-svgrepo-com.svg');
+    background-size: cover;
+}
+
+#address::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url('images/contact-map-pin-svgrepo-com.svg');
+    background-size: cover;
+}
+
+.primary-footer table td {
+    margin-right: 20px;
+}
+
+.primary-footer a:hover {
     text-decoration: underline;
 }
 
 #copyright {
+    padding: 20px;
 }
