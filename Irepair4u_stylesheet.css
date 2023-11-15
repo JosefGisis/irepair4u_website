@@ -41,10 +41,10 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
     --red-accent: rgb(225, 30, 70);
     --lighter-red-accent: rgba(225, 30, 70, 0.8);
-    --gray-accent: rgb(190, 190, 190);
+    --gray-accent: rgb(210, 210, 210);
 
     --gray-background: rgba(190, 190, 190, 0.3);
-    --red-background: rgba(225, 30, 70, 0.3);
+    --red-background: rgba(225, 30, 70, 0.4);
     --background-color: rgb(245, 245, 245);
     --shadow-color: rgb(160, 160, 160);
     --lighter-shadow-color: rgb(200, 200, 200);
@@ -150,6 +150,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .nine-column-width {
     max-width: var(--nine-column-width);
     text-align: center;
+    margin: 0 auto;
 }
 
 .twelve-column-width {
@@ -204,6 +205,7 @@ section {
     grid-template-rows: auto auto; 
     justify-content: center;
     justify-items: center;
+    padding-block: 2em;
 }
 
 .red-button { 
@@ -259,6 +261,13 @@ body {
 
 
 /* banner and banner content style */
+.banner {
+    padding-block: 1em;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--shadow-color);
+}
+
 .banner h1,
 .banner h2, 
 .banner h3, 
@@ -367,19 +376,17 @@ header .red-button {
 }
 
 
-#services h1 {
-    padding-bottom: 1em;
-}
 .grid-card {
     color: white;
     margin-block: 1em;
     padding: 10px;
-    background-color: var(--lighter-red-accent);
-    width: var(--three-column-width);
+    background-color: var(--red-accent);
+    width: calc(var(--three-column-width) + 40px);
     height: var(--four-column-width);
     border-radius: 20px;
     overflow: hidden;
-    transition: transform 3s;
+    transition: all 1s;
+    box-shadow: 4px 8px 4px 0 var(--shadow-color);
 }
 
 .grid-card-logo {
@@ -394,6 +401,9 @@ header .red-button {
 }
 
 .grid-card-text {
+    font-size: var(--fs-card);
+    font-weight: var(--fw-semi-bold);
+    opacity: 0;
     height: var(--four-column-width);
     text-align: left;
     display: flex;
@@ -404,11 +414,17 @@ header .red-button {
     transition: all 1s;
 }
 
+.grid-card:hover {
+    background: var(--lighter-red-accent);
+}
+
 .grid-card:hover .grid-card-logo {
+    opacity: 0;
     transform: translateY(-100%);
 }
 
 .grid-card:hover .grid-card-text {
+    opacity: 1; 
     transform: translateY(-100%);
 }
 
