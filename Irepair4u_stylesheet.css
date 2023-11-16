@@ -56,12 +56,14 @@ p, h1, h2, h3, h4, h5, h6 {
     --fs-body: 1rem;
     --fs-card: 1.1rem;
     --fs-column: 1.2rem;
+    --fs-title-small: 1.5rem; 
     --fs-title: 2rem;
     --fs-section-title: 3rem;
      
     --two-column-width: 140px;
     --three-column-width: 220px;
     --four-column-width: 300px;
+    --five-column-width: 380px;
     --six-column-width: 460px;
     --eight-column-width: 620px;
     --nine-column-width: 700px;
@@ -111,6 +113,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .fs-section-title {
     font-size: var(--fs-section-title);
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit; 
 }
 
 .fw-regular {
@@ -136,6 +141,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .four-column-width {
     max-width: var(--four-column-width);
 }
+
 
 .six-column-width {
     max-width: var(--six-column-width);
@@ -167,6 +173,12 @@ section {
 
 .container {
     width: min(var(--twelve-column-width), 100% - var(--base-padding));
+    margin-inline: auto;
+    padding-block: 1rem;
+}
+
+.services-container {
+    width: min(var(--full-width), 100% - var(--base-padding));
     margin-inline: auto;
     padding-block: 1rem;
 }
@@ -347,7 +359,7 @@ header .red-button {
 
 
 #about-detailed {
-    background: linear-gradient(to bottom right, white, var(--gray-background), white, var(--gray-background));
+    background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
 }
 
 #about-detailed .double-column {
@@ -362,9 +374,10 @@ header .red-button {
 }
 
 .double-column-text h3 {
+    color: white;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to right, var(--gray-background), var(--gray-accent));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
 .double-column-text p {
@@ -375,22 +388,54 @@ header .red-button {
     order: 2;
 }
 
-
 .grid-card {
+    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-size: cover;
     color: white;
     margin-block: 1em;
-    padding: 10px;
     background-color: var(--red-accent);
     width: calc(var(--three-column-width) + 40px);
-    height: var(--four-column-width);
-    border-radius: 20px;
+    height: var(--five-column-width);
+    border: 0;
+    border-style: solid;
+    border-color: white;
     overflow: hidden;
     transition: all 1s;
     box-shadow: 4px 8px 4px 0 var(--shadow-color);
 }
 
+#screen-replacement-info {
+    background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
+    background-size: cover;
+}
+
+#water-damage-info {
+    background-image: url("home page/images/iphone-1067991_640.jpg");
+    background-size: cover;
+}
+
+#battery-replacement-info {
+    background-image: url("home page/images/tyler-lastovich-rAtzDB6hWrU-unsplash.jpg");
+    background-size: cover; 
+}
+
+#data-recovery-info {
+    background-image: url("home page/images/benjamin-lehman-GNyjCePVRs8-unsplash.jpg");
+    background-size: cover;
+}
+
+#accessories-info {
+    background-image: url("home page/images/lucas-hoang-0_S1K3u6Cmc-unsplash.jpg");
+    background-size: cover;
+}
+
+#speaker-repair-info {
+    background-image: url("home page/images/apple-1284223_640.jpg");
+    background-size: cover;
+}
+
 .grid-card-logo {
-    height: var(--four-column-width);
+    height: var(--five-column-width);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -400,12 +445,18 @@ header .red-button {
     transition: all 1s;
 }
 
+.grid-card-logo h3 {
+    font-size: var(--fs-title-small);
+    font-weight: var(--fw-bold);
+}
+
 .grid-card-text {
     font-size: var(--fs-card);
-    font-weight: var(--fw-semi-bold);
+    font-weight: var(--fw-bold);
     opacity: 0;
-    height: var(--four-column-width);
+    height: var(--five-column-width);
     text-align: left;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,6 +475,7 @@ header .red-button {
 }
 
 .grid-card:hover .grid-card-text {
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 1; 
     transform: translateY(-100%);
 }
@@ -478,8 +530,12 @@ header .red-button {
     background-size: cover;
 }
 
+.primary-footer table th {
+    padding-bottom: 20px;
+}
+
 .primary-footer table td {
-    margin-right: 20px;
+    padding-right: 2em;
 }
 
 .primary-footer a:hover {
