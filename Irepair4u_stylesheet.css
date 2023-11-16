@@ -112,8 +112,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .fs-section-title {
+    /* fs-section-title font-size gets special styling */
     font-size: var(--fs-section-title);
-    border-bottom: 3px;
+    border-bottom: 2px;
     border-bottom-style: solid;
     border-bottom-color: inherit; 
 }
@@ -130,6 +131,8 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: var(--fw-bold);
 }
 
+
+/* Column width general styling */
 .two-column-width {
     max-width: var(--two-column-width);
 }
@@ -141,7 +144,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .four-column-width {
     max-width: var(--four-column-width);
 }
-
 
 .six-column-width {
     max-width: var(--six-column-width);
@@ -167,6 +169,8 @@ p, h1, h2, h3, h4, h5, h6 {
     max-width: var(--full-width);
 }
 
+
+/* General element styling */
 section {
     padding-block: 2rem; 
 }
@@ -220,6 +224,8 @@ section {
     padding-block: 2em;
 }
 
+
+/* Button styling */
 .red-button { 
     color: white;
     background-color: var(--red-accent);
@@ -263,6 +269,9 @@ section {
 }
 
 
+/* Specific element styling */
+
+
 /* Body and body content style */
 body {
     font-family: sans-serif;
@@ -287,6 +296,7 @@ body {
     text-align: center;
     padding-bottom: 1em;
 }
+
 
 /* Header and header content style */
 header {
@@ -326,13 +336,9 @@ header .red-button {
 
 .svg-background {
     position: absolute;
-    transform: rotate(-20deg);
-    margin: 0;
-    padding: 0;
+    transform: rotate(-10deg);
     top: 0px;
     left: 55%;
-    width: 400px;
-    height: 400px;
     z-index: -1;
     opacity: 0.3;
 }
@@ -358,6 +364,7 @@ header .red-button {
 }
 
 
+/* about-detailed content and section styling */
 #about-detailed {
     background: linear-gradient(to bottom right, var(--gray-background), var(--gray-accent));
 }
@@ -369,7 +376,8 @@ header .red-button {
 
 .double-column-text {
     height: 307px;
-    order: 1;
+    /* Inactive order property */
+    /* order: 1; */
     max-width: var(--six-column-width);  
 }
 
@@ -385,9 +393,12 @@ header .red-button {
 }
 
 .double-column-image {
-    order: 2;
+    /* Inactive order property */
+    /* order: 2; */
 }
 
+
+/* Services section grid and grid card styling */
 .grid-card {
     background-image: url("home page/images/age-barros-fKAjOxgZNPg-unsplash.jpg");
     background-size: cover;
@@ -480,6 +491,7 @@ header .red-button {
     transform: translateY(-100%);
 }
 
+
 /* footer and footer content style */
 .primary-footer{
     color: white;
@@ -493,6 +505,14 @@ header .red-button {
 .primary-footer li {
     list-style: none;
     margin-bottom: 20px;
+}
+
+.primary-footer li div {
+    width: var(--three-column-width);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .primary-footer a {
