@@ -304,6 +304,14 @@ header {
     box-shadow: 0px 0px 20px 5px var(--shadow-color);
 }
 
+.logo img {
+    image-rendering: optimizeSpeed;
+    width: 387px;
+    height: 45px;
+    shape-rendering: crispEdges; 
+    object-fit: contain;
+}
+
 .navbar-list li {
     /* inline-block removes list styles and make items horizontal */
     display: inline-block;
