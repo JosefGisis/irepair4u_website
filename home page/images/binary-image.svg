@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="105.94553mm"
-   height="149.44623mm"
-   viewBox="0 0 105.94553 149.44623"
+   width="52.574745mm"
+   height="29.898539mm"
+   viewBox="0 0 52.574745 29.898539"
    version="1.1"
    id="svg1"
    sodipodi:docname="binary-image.svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showborder="false"
      inkscape:zoom="0.72426347"
-     inkscape:cx="431.47282"
-     inkscape:cy="301.68579"
+     inkscape:cx="430.0921"
+     inkscape:cy="-53.157451"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -46,28 +46,28 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-50.387836,-41.50414)">
+     transform="translate(-50.872822,-134.93816)">
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';white-space:pre;shape-inside:url(#rect1);fill:#ffffff" />
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, ';white-space:pre;shape-inside:url(#rect1);display:inline;fill:#ffffff" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:87.9583px;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;stroke-width:7.32984"
-       x="39.458851"
-       y="111.49105"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;letter-spacing:2.64583px;word-spacing:1.32292px;fill:#ffffff;stroke-width:6.63385"
+       x="35.712128"
+       y="145.29179"
        id="text2"
-       transform="scale(1.1630412,0.85981478)"><tspan
+       transform="scale(1.2850611,0.77817309)"><tspan
          sodipodi:role="line"
          id="tspan2"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;stroke-width:7.32984"
-         x="39.458851"
-         y="111.49105">1 0</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:52.9167px;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Light';letter-spacing:2.64583px;word-spacing:1.32292px;stroke-width:6.63385"
+         x="35.712128"
+         y="145.29179" /><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;stroke-width:7.32984"
-         x="39.458851"
-         y="221.43892"
-         id="tspan3">0 1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:52.9167px;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Light';letter-spacing:2.64583px;word-spacing:1.32292px;stroke-width:6.63385"
+         x="35.712128"
+         y="211.43767"
+         id="tspan3">01</tspan></text>
   </g>
 </svg>
